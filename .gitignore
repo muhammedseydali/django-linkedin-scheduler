@@ -1,0 +1,71 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Django Specific ---
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+static/
+.env
+.env.local
+.env.*.local
+
+# --- Virtual Environment ---
+venv/
+env/
+ENV/
+.venv/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Unit test / coverage reports ---
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# --- mypy / Pyre type checker ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# --- Pytest ---
+.pytest_cache/
+
+# --- Deployment ---
+*.bak
+*.pid
+*.seed
+*.log
+*.out
+
+# --- Docker ---
+*.pid
+*.seed
+*.log
+*.out
+*.db
+docker-compose.override.yml
