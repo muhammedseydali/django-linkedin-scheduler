@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+if DEBUG:
+    ALLOWED_HOSTS = ['*', '.hungrypy.com']
+
+CSRF_TRUSTED_ORIGINS = ['https://*.hungrypy.com']
 
 # Application definition
 
@@ -37,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'posts',
 
     'allauth',
     'allauth.account',
@@ -142,19 +148,19 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIALACCOUNT_STORE_TOKENS = True
 
-SOCIALACCOUNT_PROVIDERS = {
-    "openid_connect": {
-        "APPS": [
-            {
-                "provider_id": "linkedin",
-                "name": "LinkedIn",
-                "client_id": "<insert-id>",
-                "secret": "<insert-secret>",
-                "settings": {
-                    "scope": ["openid", "profile", "w_member_social", "email"],
-                    "server_url": "https://www.linkedin.com/oauth",
-                },
-            }
-        ]
-    }
-}
+# SOCIALACCOUNT_PROVIDERS = {
+#     "openid_connect": {
+#         "APPS": [
+#             {
+#                 "provider_id": "linkedin",
+#                 "name": "LinkedIn",
+#                 "client_id": "<insert-id>",
+#                 "secret": "<insert-secret>",
+#                 "settings": {
+#                     "scope": ["openid", "profile", "w_member_social", "email"],
+#                     "server_url": "https://www.linkedin.com/oauth",
+#                 },
+#             }
+#         ]
+#     }
+# }
