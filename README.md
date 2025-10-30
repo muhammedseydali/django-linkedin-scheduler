@@ -32,6 +32,7 @@ The system is divided into three main components:
 Here’s how everything connects:
 
 ```mermaid
+
 graph TD
     A[ User] -->|Clicks "Login with LinkedIn"| B[Django + AllAuth]
     B -->|OAuth Redirect| C[🔗 LinkedIn OAuth]
@@ -43,6 +44,8 @@ graph TD
     E -->|Waits Until Scheduled Time| F[⏰ Inngest Worker]
     F -->|Triggers POST Request| G[🌐 LinkedIn API]
     G -->|Publishes Post| H[📰 LinkedIn Feed]
+
+    
 OAuth Authentication Flow
 Create a LinkedIn Developer App at LinkedIn Developers.
 
@@ -80,6 +83,7 @@ LINKEDIN_CLIENT_SECRET=your_client_secret
 LINKEDIN_REDIRECT_URI=http://localhost:8000/accounts/linkedin/login/callback/
 INNGEST_API_KEY=your_inngest_api_key
 DJANGO_SECRET_KEY=your_django_secret_key
+
 ▶️ Run the Project
 bash
 Copy code
@@ -147,8 +151,3 @@ Building innovative automation & web solutions
 
 License
 This project is licensed under the MIT License — see the LICENSE file for details.
-
----
-
-Would you like me to also create a **GitHub-ready preview image** (architecture diagram or project banner) for the top of your README?  
-It helps a lot with presentation if you plan to publish it publicly.
